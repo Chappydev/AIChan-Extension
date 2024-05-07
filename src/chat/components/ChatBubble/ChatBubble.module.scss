@@ -1,0 +1,39 @@
+@use "sass:color";
+@use "../../styles/mixins" as m;
+@use "../../styles/colors" as c;
+@use "../../styles/spacing" as s;
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  padding: 0.6em 0;
+
+  &:has([data-role="user"]) {
+    flex-direction: row-reverse;
+  }
+}
+
+.innerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: s.$gap;
+  max-width: 85%;
+}
+
+.messageBubble {
+  width: 100%;
+  padding: s.$chat-padding;
+  border-radius: s.$border-radius;
+  border-top-right-radius: 0px;
+  background-color: c.$lighter-black;
+  white-space: pre-line;
+  @include m.shadow;
+  &[data-role="assistant"] {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 14px;
+  }
+
+  &.error {
+    border: 2px solid c.$red;
+  }
+}

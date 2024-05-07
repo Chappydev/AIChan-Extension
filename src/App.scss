@@ -1,3 +1,7 @@
+@use "./chat/styles/colors" as c;
+@use "sass:color" as color;
+$darkened-bg: color.scale(c.$bg-black, $lightness: -30%);
+
 .App {
   text-align: center;
 }
@@ -39,4 +43,25 @@
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+.chatWrapper {
+  flex: 1 0 0;
+  display: flex;
+  height: 50%;
+}
+
+.wrapperWrapper {
+  height: 500px;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  background-color: c.$bg-black;
+  color: white;
+  font-size: 1.0625rem;
+  overflow: hidden;
+  // TODO: Change this so the size of everything is the same and it's just moving in from the right
+  transition: flex-grow 0.6s ease-out;
 }

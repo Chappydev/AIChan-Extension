@@ -1,0 +1,10 @@
+@use "../../styles/spacing" as s;
+
+.chips {
+  display: flex;
+  gap: s.$gap;
+  justify-content: space-between;
+  // > div:last-child {
+  //   margin-left: auto;
+  // }
+}

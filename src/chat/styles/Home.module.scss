@@ -1,0 +1,56 @@
+@use "sass:color";
+@use "./spacing" as s;
+@use "./colors" as c;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - s.$navbar-height);
+  // background: linear-gradient(45deg, rgb(255, 136, 0), green);
+  // background-color: c.$darker-black;
+  background: linear-gradient(162deg, c.$darker-black, c.$darker-black 55%, c.$dark-blue);
+  font-size: 1.0625rem;
+}
+
+.wrapper {
+  display: flex;
+  height: 80%;
+  width: 80%;
+  border-radius: 14px;
+  background-color: c.$bg-black;
+  box-shadow: 0 0 6px 1px color.change(c.$bg-black, $alpha: 0.6);
+  color: white;
+  overflow: hidden;
+  > div {
+    &:first-of-type {
+      border-right: 1px solid black;
+    }
+    flex: 1 0 0;
+  }
+}
+
+.tourStartButton {
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.textWrapper {
+  line-height: 200%;
+  font-size: 1.125rem;
+}
+
+.textWrapper,
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.textLines,
+.chatBubbles {
+  flex: 1 1 0;
+  padding: 1rem;
+  overflow-y: auto;
+}

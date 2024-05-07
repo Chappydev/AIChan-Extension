@@ -1,0 +1,41 @@
+@use "sass:color";
+@use "../../styles/spacing" as s;
+@use "../../styles/colors" as c;
+
+.wrapper {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 0.6rem;
+  padding: 1rem 1.2rem;
+  height: s.$text-box-height;
+  border-radius: 12px 12px 0 0;
+  background-color: c.$lighter-black;
+  box-shadow: 0 0 8px color.change(black, $alpha: 0.4);
+}
+
+.textInput {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.6rem;
+  line-height: normal;
+  font-size: 1.0625rem;
+}
+
+.submit {
+  border-radius: 10px;
+  padding: 0.6rem;
+  line-height: 0;
+  cursor: pointer;
+  background-color: color.scale(c.$accent-blue, $lightness: -10%);
+  font-size: 1.0625rem;
+  &:hover {
+    background-color: color.scale(c.$accent-blue, $lightness: -5%);
+  }
+}
+
+.textInput,
+.submit {
+  &:focus-visible {
+    outline: white solid 1px;
+  }
+}
