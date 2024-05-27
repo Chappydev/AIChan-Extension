@@ -21,6 +21,15 @@
       "matches": ["https://www.google.com/*"]
     }
   ],
+  "commands": {
+    "use_text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Use the highlighted text in AIChan assistant"
+    }
+  },
   "host_permissions": ["https://www.google.com/*"],
-  "permissions": ["tabs", "scripting", "storage"]
+  "permissions": ["tabs", "scripting", "storage", "commands"]
 }
